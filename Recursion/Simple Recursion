@@ -1,1 +1,8 @@
+;; 
+;; Matthew Li
+;; Racket - Recursion
+;; Simple Recursion
+;;
 
+;; When recursion is applied, every argument is one step closer to the base case or unchanged
+;; For example:
