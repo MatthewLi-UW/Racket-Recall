@@ -1,2 +1,2 @@
 # Racket
-A summary of what I've learned in Racket
+A summary of some key concepts I've learned in Racket
