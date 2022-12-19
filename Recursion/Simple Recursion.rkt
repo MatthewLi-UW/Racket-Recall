@@ -7,7 +7,7 @@
 ;; Simple Recursion
 ;; -------------------
 
-;; When recursion is applied, every argument is either
+;; When simple recursion is applied, every argument is either
 ;;    * one step closer to the base case
 ;;    * unchanged
 
