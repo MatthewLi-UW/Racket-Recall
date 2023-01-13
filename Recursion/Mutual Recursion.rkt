@@ -11,23 +11,23 @@
 ;; Let's take a look at an example of a pebbles game
 
 ;; Ex: Write a function of a game where whoever takes the last pebble wins
-;; Alice's strategy: Always take 1 pebble
-;; Bob's strategy: If pebble-count is even, take 2. If pebble-count is odd, take 1.
+;; Matthew's strategy: Always take 1 pebble
+;; Jeff's strategy: If pebble-count is even, take 2. If pebble-count is odd, take 1.
 
 ;; pebbles: Num -> Str
 (define (pebbles n)
   (local
-    [;; Alice's strategy
-     (define (alice n) 
+    [;; Matthew's strategy
+     (define (matthew n) 
        (cond
-         [(= 1 n) "Alice wins"] ;; When there is 1 pebble remaining, Alice wins
-         [else (bob (sub1 n))])) ;; Otherwise, Bob goes with -1 pebble-count
-     ;; Bob's strategy
-     (define (bob n)
+         [(= 1 n) "Matthew wins"] ;; When there is 1 pebble remaining, Matthew wins
+         [else (jeff (sub1 n))])) ;; Otherwise, Jeff goes with -1 pebble-count
+     ;; Jeff's strategy
+     (define (jeff n)
        (cond
-         [(or (= 1 n) (= 2 n)) "Bob wins"] ; When there is 1 or 2 pebbles remaining, Bob wins
-         [(even? n) (alice (- n 2))] ;; If pebble-count is even, Alice goes with -2 pebble-count
-         [(odd? n) (alice (sub1 n))]))] ;; If pebble-count is odd, Alice goes with -1 pebble-count
-    (alice n)))
+         [(or (= 1 n) (= 2 n)) "Jeff wins"] ; When there is 1 or 2 pebbles remaining, Jeff wins
+         [(even? n) (matthew (- n 2))] ;; If pebble-count is even, Matthew goes with -2 pebble-count
+         [(odd? n) (matthew (sub1 n))]))] ;; If pebble-count is odd, Matthew goes with -1 pebble-count
+    (matthew n)))
 
-;; Note that in this case, Bob always wins!
+;; Note that in this case, Jeff always wins!
